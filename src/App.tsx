@@ -71,7 +71,7 @@ export default function App() {
       <div className="fixed -top-40 -left-10 w-[600px] h-[600px] bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none" />
 
       {/* Navbar */}
-      <nav className="fixed top-6 left-0 right-0 px-8 lg:px-16 z-50 flex items-center justify-between">
+      <nav className="fixed top-6 left-2 right-1 px-16 z-50 flex items-center justify-between">
         <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-sm overflow-hidden p-1 bg-black">
           <img src="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/letra_nmbmjf.png" alt="Logo" className="w-full h-full object-contain" />
         </div>
