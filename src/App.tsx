@@ -4,7 +4,7 @@ import { ArrowUpRight, Play, Clock, Globe, Image as ImageIcon, Film, Lightbulb, 
 
 
 const FOOD_VIDEOS = {
-  HERO: '/001.mp4',
+  HERO: 'https://res.cloudinary.com/dku13l2ep/video/upload/v1777319242/garage/002_lz2dyv.mp4',
 };
 
 interface CartItem {
@@ -54,7 +54,7 @@ export default function App() {
     const message = `¡Hola! Me gustaría realizar el siguiente pedido en Garage Chilling:\n\n` +
       cart.map(item => `- ${item.quantity}x ${item.title} (${item.price})`).join('\n') +
       `\n\n*Total estimado: $${cartTotal}*\n\n¿Me podrían confirmar el tiempo de entrega?`;
-    
+
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -73,7 +73,7 @@ export default function App() {
       {/* Navbar */}
       <nav className="fixed top-6 left-0 right-0 px-8 lg:px-16 z-50 flex items-center justify-between">
         <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-sm overflow-hidden p-1 bg-black">
-          <img src="/letra.png" alt="Logo" className="w-full h-full object-contain" />
+          <img src="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/letra_nmbmjf.png" alt="Logo" className="w-full h-full object-contain" />
         </div>
 
         <div className="flex items-center gap-4">
@@ -139,7 +139,7 @@ export default function App() {
             initial={{ filter: 'blur(10px)', opacity: 0, scale: 0.8 }}
             animate={{ filter: 'blur(0px)', opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
-            src="/logo.png"
+            src="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/logo_lisxaa.png"
             alt="Garage Chilling Logo"
             className="w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-auto mb-12 drop-shadow-2xl"
           />
@@ -208,7 +208,7 @@ export default function App() {
       {/* Menu / Gastronomy Section */}
       <section id="menu" className="relative min-h-screen bg-[#fcfcfc] overflow-hidden py-32 px-8 lg:px-20">
         <img
-          src="/bg.png"
+          src="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/bg_mltzlk.png"
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-80"
           alt="Menu Background"
         />
@@ -234,7 +234,7 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 text-left">
             <MenuCard
-              image="/classic.png"
+              image="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/classic_ydxsiu.png"
               icon={<ImageIcon className="w-5 h-5" />}
               tags={['Solomo/Pollo', 'Cheddar', 'Salsa Casa']}
               title="Classic"
@@ -243,7 +243,7 @@ export default function App() {
               onAddToCart={() => addToCart({ title: 'Classic', price: '6$', image: '/classic.png' })}
             />
             <MenuCard
-              image="/especial.png"
+              image="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/ocean_k1h1lp.png"
               icon={<Film className="w-5 h-5" />}
               tags={['Solomo/Pollo', 'Tocineta', 'Facilista']}
               title="Garage Especial"
@@ -252,7 +252,7 @@ export default function App() {
               onAddToCart={() => addToCart({ title: 'Garage Especial', price: '8$', image: '/especial.png' })}
             />
             <MenuCard
-              image="/crispy.png"
+              image="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/chicken_bn5wmb.png"
               icon={<Lightbulb className="w-5 h-5" />}
               tags={['Pollo Crispy', 'BBQ Miel', 'Pepinillos']}
               title="Crispy Honey"
@@ -261,7 +261,7 @@ export default function App() {
               onAddToCart={() => addToCart({ title: 'Crispy Honey', price: '8$', image: '/crispy.png' })}
             />
             <MenuCard
-              image="/chicken.png"
+              image="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/especial_fq6upq.png"
               icon={<ImageIcon className="w-5 h-5" />}
               tags={['Pollo Crispy', 'Tocineta', 'Coleslaw']}
               title="Chicken Burger"
@@ -270,7 +270,7 @@ export default function App() {
               onAddToCart={() => addToCart({ title: 'Chicken Burger', price: '8$', image: '/chicken.png' })}
             />
             <MenuCard
-              image="/pork.png"
+              image="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/crispy_vp8cgc.png"
               icon={<Clock className="w-5 h-5" />}
               tags={['Smash 160g', 'Pullpork', 'Mozzarella']}
               title="Pullpork Burger"
@@ -279,7 +279,7 @@ export default function App() {
               onAddToCart={() => addToCart({ title: 'Pullpork Burger', price: '12$', image: '/pork.png' })}
             />
             <MenuCard
-              image="/ocean.png"
+              image="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/pork_mdufuw.png"
               icon={<Globe className="w-5 h-5" />}
               tags={['Solomo', 'Camarones', 'Ajo']}
               title="Ocean Burger"
@@ -353,7 +353,7 @@ export default function App() {
                     <span className="text-black/40 uppercase tracking-widest text-[10px] font-black">Total estimado</span>
                     <span className="text-3xl font-heading italic text-brand-orange">${cartTotal}</span>
                   </div>
-                  <button 
+                  <button
                     onClick={handleCheckout}
                     className="w-full bg-black text-white py-4 rounded-full font-black uppercase tracking-tighter hover:bg-brand-orange transition-all shadow-lg"
                   >
