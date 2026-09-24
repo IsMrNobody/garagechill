@@ -70,8 +70,22 @@ export default function App() {
       <div className="fixed inset-0 orange-glow pointer-events-none" />
       <div className="fixed -top-40 -left-10 w-[600px] h-[600px] bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none" />
 
+      {/* Top Banner Destacado */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/95 backdrop-blur-md border-b border-zinc-800 text-white py-2 px-3 md:px-4 shadow-lg flex flex-wrap items-center justify-center gap-2 md:gap-4 text-xs md:text-sm text-center">
+        <span>⚠️ ¿Eres el propietario o administrador de <strong className="font-semibold text-white">Garage Chilling</strong>?</span>
+        <a
+          href="https://wa.me/584128352365?text=Hola%2C%20soy%20el%20due%C3%B1o%20de%20Garage%20Chilling%20y%20quiero%20activar%20este%20men%C3%BA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-fuchsia-600 to-violet-600 hover:from-fuchsia-500 hover:to-violet-500 text-white font-semibold px-4 py-1.5 rounded-full shadow-md transition-all inline-flex items-center gap-1.5 text-xs md:text-sm hover:scale-105 active:scale-95"
+        >
+          <span>Reclamar este Menú Interactivo</span>
+          <span>↗</span>
+        </a>
+      </div>
+
       {/* Navbar */}
-      <nav className="fixed top-6 left-2 right-1 px-16 z-50 flex items-center justify-between">
+      <nav className="fixed top-14 left-2 right-1 px-4 lg:px-16 z-40 flex items-center justify-between">
         <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-sm overflow-hidden p-1 bg-black">
           <img src="https://res.cloudinary.com/dku13l2ep/image/upload/v1777319241/garage/letra_nmbmjf.png" alt="Logo" className="w-full h-full object-contain" />
         </div>
